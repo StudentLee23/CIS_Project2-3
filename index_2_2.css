@@ -1,0 +1,54 @@
+@charset "utf-8";
+
+/*
+Lee Chuor
+CIS162 Project 2-3
+12-02-23
+*/
+
+/*Body*/
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 960px;
+    height: 100vh;
+    background-color: azure;
+}
+
+body {
+    display: grid;
+    grid-template-areas:    "header header"
+                            "nav div"
+                            "footer div";
+    grid-template-columns: repeat(1fr 2fr);
+    grid-column-gap: 15px;
+    grid-row-gap: 10px;
+}
+
+/*Header*/
+body > header {
+    grid-area: header;
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+
+/*Navigation*/
+body > nav > ul {
+    list-style-type: none;
+    grid-area: nav;
+    padding-left: 25px;
+}
+
+/*div right*/
+body > div.right {
+    grid-area: div;
+    padding-left: 10px;
+    max-width: 100%;
+}
+
+/*Footer*/
+body > footer {
+    align-items: right;
+}

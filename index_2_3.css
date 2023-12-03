@@ -1,0 +1,76 @@
+@charset "utf-8";
+
+/*
+Lee Chuor
+CIS162 Project 2-3
+12-02-23
+*/
+
+/*Body*/
+
+body {
+    margin-left: auto;
+    margin-right: auto;
+    width: 95%;
+    max-width: 960px;
+    height: 100vh;
+    background-color: azure;
+}
+
+body {
+    display: grid;
+    grid-template-areas:    "header header header header"
+                            "nav sec sec sec"
+                            "form sec sec sec";
+    grid-column-gap: 5px;
+    grid-row-gap: 5px;
+}
+
+/*Header*/
+body > header {
+    grid-area: header;
+    grid-row: 1;
+    grid-column: 1/-1;
+}
+body > Header > nav.home {
+    display: block;
+    background-color: cornflowerblue;
+    text-align: center;
+    font-size: 16pt;
+}
+
+/*Navigation*/
+body > nav > ul {
+    list-style-type: none;
+    grid-area: nav;
+    padding-left: 25px;
+}
+
+/*div right*/
+body > div.right {
+    grid-area: sec;
+    padding-left: 10px;
+    min-width: 736px;
+    max-width: 960px;
+    background-color: dodgerblue;
+    text-align: center;
+    color: ghostwhite;
+}
+
+body > div.right h1 {
+    font-size: 22pt;
+}
+
+body > div.right > div.gallery {
+    padding: 15px;
+    display: block;
+    float: left;
+}
+
+/*Form Layout*/
+body > form#discussion {
+    display: flex;
+    flex-flow: row wrap;
+    padding: 5px;
+    grid-area: form;
+}
